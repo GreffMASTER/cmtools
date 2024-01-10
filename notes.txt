@@ -1,0 +1,10 @@
+Notes about the .cme files
+
+Looks like these files have multiple stages of encryption.
+After decrypting the whole file using the "1234ghji45%3245?)(2!" key, the file had visible patterns, but no visible data, like level name, description, etc.
+One thing i noticed when comparing different files, is that the first few bytes are exactly the same... but "ceasar cypher" shifted by different value.
+
+After many attempts of shifting all the bytes in the file, i discovered that with shift of 201 (+) to each byte, we can see the level description and score value.
+We can also see a familiar "30%&g/2ANUBIS=!s?p$" (without the 9 at the start) key embedded inside the file as well at position 0xD2 (every file has this key at the exact same position in the file).
+
+TODO figure this thing out
