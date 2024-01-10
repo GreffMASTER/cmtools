@@ -10,6 +10,7 @@ import numpy as np
 
 KEY_FSC = '930%&g/2ANUBIS=!s?p$'
 KEY_VSC = 'tz023416'
+KEY_CM = '1234ghji45%3245?)(2!'
 
 
 def rearranged(data, len_op):
@@ -67,6 +68,9 @@ if __name__ == '__main__':
     parser.add_argument('--vsc', '-v', action='store_true',
                         default=False,
                         help='use .vsc default key')
+    parser.add_argument('--cm', '-c', action='store_true',
+                        default=False,
+                        help='use .cml/e default key')
     parser.add_argument('--key', '-k', type=str,
                         help='specify custom key')
     args = parser.parse_args()
@@ -75,6 +79,8 @@ if __name__ == '__main__':
         key = KEY_VSC
     elif args.fsc:
         key = KEY_FSC
+    elif args.cme:
+        key = KEY_CM
     else:
         key = args.key
 
